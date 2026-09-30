@@ -1,8 +1,12 @@
 package arranque;
 
+import modelos.Suite;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Sistema de Gestión del Hotel iniciado.");
         // Aquí tú instanciarás la clase Suite cuando hagas tu Pull Request
+        Suite su = new Suite();
+
     }
 }
