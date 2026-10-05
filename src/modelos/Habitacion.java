@@ -3,6 +3,7 @@ package modelos;
 public abstract class Habitacion {
     protected int numero;
     protected double precioBase;
+    protected double precioServicio;
 
     public Habitacion(int numero, double precioBase) {
         this.numero = numero;
