@@ -5,7 +5,7 @@ public class Suite extends  Habitacion implements Reservable{
 
     private boolean TieneJacuzzi;
 
-    public Suite() {
+    public Suite(int numero, double precioBase, boolean tieneJacuzzi) {
         super(numero, precioBase);
         TieneJacuzzi = tieneJacuzzi;
     }
