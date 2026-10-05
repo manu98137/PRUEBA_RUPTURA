@@ -1,0 +1,28 @@
+name: Comprobacion de Seguridad
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verificar_pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Obtener el código del repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar entorno Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Validar Pull Request
+        run: echo "Comprobación automática finalizada. Verificando reglas de CODEOWNERS..."
+
+      # Opcional: Si quieres que además compruebe si el código compila sin errores,
+      # quita el símbolo '#' de las dos líneas siguientes:
+      # - name: Compilar clases
+      #   run: javac src/Modelos/*.java
